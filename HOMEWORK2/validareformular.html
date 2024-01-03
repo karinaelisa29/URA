@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="validareformular.js"></script>
+ 
+  <title>Formular de Înregistrare</title>
+  <script>
+    function validateForm() {
+      // Obțineți valorile introduse în câmpurile formularului
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Validare pentru e-mail
+      var emailRegex = /\S+@\S+\.\S+/;
+      if (!emailRegex.test(email)) {
+        alert('Introduceți o adresă de e-mail validă');
+        return false;
+      }
+
+      // Validare pentru parolă
+      // Cerințe de complexitate: minim 8 caractere, cel puțin o literă mare și o cifră
+      var passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('Parola trebuie să conțină cel puțin 8 caractere, o literă mare și o cifră');
+        return false;
+      }
+
+      // Validare pentru confirmarea parolei
+      if (password !== confirmPassword) {
+        alert('Parola și confirmarea parolei nu se potrivesc');
+        return false;
+      }
+
+      // În cazul în care toate validările sunt trecute, returnează true pentru a trimite formularul
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Formular de Înregistrare</h2>
+  <form onsubmit="return validateForm()">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Parolă:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmPassword">Confirmare Parolă:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <input type="submit" value="Înregistrare">
+  </form>
+</body>
+</html>
