@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <style>
+    /* Stilizare simplă pentru aspectul listei de sarcini */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: rgb(84, 3, 78);
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Adaugă o sarcină">
+  <button onclick="addTask()">Adaugă</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      const taskInput = document.getElementById('taskInput');
+      const taskText = taskInput.value.trim();
+      if (taskText !== '') {
+        const taskList = document.getElementById('taskList');
+        const li = document.createElement('li');
+        li.textContent = taskText;
+        li.onclick = function() {
+          li.classList.toggle('completed');
+          saveTasks();
+        };
+        taskList.appendChild(li);
+        taskInput.value = '';
+        saveTasks();
+      }
+    }
+
+    function saveTasks() {
+      const taskList = document.getElementById('taskList');
+      localStorage.setItem('tasks', taskList.innerHTML);
+    }
+
+    function loadTasks() {
+      const taskList = document.getElementById('taskList');
+      taskList.innerHTML = localStorage.getItem('tasks') || '';
+      const tasks = taskList.getElementsByTagName('li');
+      for (const task of tasks) {
+        task.onclick = function() {
+          task.classList.toggle('completed');
+          saveTasks();
+        };
+        task.oncontextmenu = function(e) {
+          e.preventDefault();
+          task.remove();
+          saveTasks();
+        };
+      }
+    }
+
+    window.onload = loadTasks;
+  </script>
+  <script src="todolist.js"></script>
+</body>
+</html>
+
