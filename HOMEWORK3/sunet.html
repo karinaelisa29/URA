@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Audio Game</title>
+  <link rel="stylesheet" href="sunetstyle.css">
+  <script src="sunet.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <h1>Memory Audio Game</h1>
+    <p id="instruction">Ascultă și repetă secvența de sunete:</p>
+
+    <button onclick="startGame()">Start Joc</button>
+    <button onclick="repeatSequence()" id="repeatButton" disabled>Repetă</button>
+    <button onclick="stopSequence()" id="stopButton" disabled>Oprește</button>
+    <button onclick="restartGame()">Restart Joc</button>
+
+    <div id="score">Punctaj: 0</div>
+    
+    <audio controls>
+      <source src="c:/Users/danye/OneDrive/Documents/Sounds/sunet1.mp3" type="audio/mp3">
+      <source src="c:/Users/danye/OneDrive/Documents/Sounds/sunet2.mp3" type="audio/mp3">
+      <source src="c:/Users/danye/OneDrive/Documents/Sounds/sunet3.wav" type="audio/wav">
+    </audio>
+  </div>
+</body>
+</html>

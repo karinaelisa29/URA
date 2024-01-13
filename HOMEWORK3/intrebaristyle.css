@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #062d5a;
+  }
+  
+  #question-container {
+    margin-top: 20px;
+  }
+  
+  #result-container {
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #8576b1;
+  }
+  
+  h1 {
+    color: #603333;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  #question-container {
+    margin-top: 20px;
+    background-color: #ad71ae;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #result-container {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #7107bc;
+    color: #2e87a2;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #2d2c86;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  button.option {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #130d72;
+    color: #641212;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button.option:hover {
+    background-color: #0991eb;
+  }
+  
