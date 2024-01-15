@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Adaugăm stiluri pentru a rearanja elementele */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #signup-container {
+      text-align: center;
+    }
+
+    #signup-form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="signup-container">
+      <h1>Sign Up</h1>
+      <form id="signup-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+
+        <!-- Adaugăm un div pentru mesajul de eroare -->
+        <div id="error-message" style="color: red;"></div>
+
+        <button type="button" onclick="signup()">Sign Up</button>
+      </form>
+    </div>
+    <p>Already have an account? <a href="signin.html">Sign In</a></p>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Admin Panel Section -->
+  <section id="admin-panel-section">
+    <div id="admin-panel-container">
+      <!-- Include the Admin Panel HTML code here -->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="admin-panel-container">
+    <h1>Admin Panel</h1>
+
+    <div id="user-list">
+      <h2>User List</h2>
+      <ul id="users"></ul>
+    </div>
+
+    <div id="edit-user">
+      <h2>Edit User</h2>
+      <form id="edit-form">
+        <label for="edit-username">Username:</label>
+        <input type="text" id="edit-username" required>
+        <label for="edit-role">Role:</label>
+        <select id="edit-role" required>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+
+    <button onclick="AdminPanel.addUser()">Add User</button>
+    <button onclick="AdminPanel.removeUser()">Remove User</button>
+    <button onclick="AdminPanel.logout()">Logout</button>
+  </div>
+
+  <script src="adminpanel.js"></script>
+</body>
+</html>
+
+      <h1>Admin Panel</h1>
+      <!-- ... -->
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard-section">
+    <div id="dashboard-container">
+      <!-- Include the Dashboard HTML code here -->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="dashboard-container">
+    <h1>Welcome to the Dashboard</h1>
+
+    <div id="user-section" class="dashboard-section">
+      <h2>User Section</h2>
+      <p id="user-info"></p>
+    </div>
+
+    <div id="admin-section" class="dashboard-section">
+      <h2>Admin Section</h2>
+      <p id="admin-info"></p>
+      <button onclick="addUser()">Add User</button>
+      <button onclick="removeUser()">Remove User</button>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
+
+      <h1>Welcome to the Dashboard</h1>
+      <!-- ... -->
+    </div>
+  </section>
+
+  <!-- Authentication and Registration Section -->
+  <section id="auth-section">
+    <div class="container">
+      <!-- Include the Sign In HTML code here -->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+       
+
+        <h1 class="heading">Create your account</h1>
+        
+        <input class="signin-email" type="text" placeholder="Enter your email">
+        <input class="signin-password" type="password" placeholder="Enter your password">
+        
+        <button class="signin-button" onclick="signin()">Submit</button>
+
+        <p class="signin-message">If you don't have an account, click <a href="signup.html">here</a> to sign up.</p>
+    </div>
+    <script src="js/signin.js"></script>
+</body>
+</html>
+      <h1 class="heading">Sign In</h1>
+      <!-- ... -->
+
+      <!-- Include the Sign Up HTML code here -->
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+
+        <h1 class="heading">Create your account</h1>
+        
+        <input class="signup-email" type="text" placeholder="Enter your email">
+        <input class="signup-password" type="password" placeholder="Enter your password">
+        <input class="signup-retype-password" type="password" placeholder="Retype your password">
+
+        <button class="signup-button" onclick="submit()">Submit</button>
+
+        <p class="signup-message">If you have an account, click <a href="signin.html">here</a> to sign in.</p>
+    </div>
+    <script src="js/signup.js"></script>
+</body>
+</html>
+      <h1 class="heading">Sign Up</h1>
+      <!-- ... -->
+    </div>
+  </section>
+
+  <!-- Include your JavaScript files -->
+  <script src="adminpanel.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="js/signin.js"></script>
+  <script src="js/signup.js"></script>
+
+  <!-- Initialize your app (e.g., call functions to display initial content) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Initialize Admin Panel, Dashboard, etc.
+      AdminPanel.displayUserList();
+      displayDashboardInfo(); // Assuming displayDashboardInfo is available
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="notes-container">
+    <h1>Your Notes</h1>
+    <input type="text" id="filter-notes" placeholder="Filter notes..." oninput="filterNotes()">
+    <div id="notes-list">
+      <!-- Aici vom afișa lista de notițe -->
+    </div>
+    <textarea id="new-note" rows="5" placeholder="Add a new note..."></textarea>
+    <button onclick="addNote()">Add Note</button>
+    <button onclick="goToDashboard()">Go to Dashboard</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="notite.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

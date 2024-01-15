@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="admin-panel-container">
+    <h1>Admin Panel</h1>
+
+    <div id="user-list">
+      <h2>User List</h2>
+      <ul id="users"></ul>
+    </div>
+
+    <div id="edit-user">
+      <h2>Edit User</h2>
+      <form id="edit-form">
+        <label for="edit-username">Username:</label>
+        <input type="text" id="edit-username" required>
+        <label for="edit-role">Role:</label>
+        <select id="edit-role" required>
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+
+    <button onclick="AdminPanel.addUser()">Add User</button>
+    <button onclick="AdminPanel.removeUser()">Remove User</button>
+    <button onclick="AdminPanel.logout()">Logout</button>
+  </div>
+
+  <script src="adminpanel.js"></script>
+</body>
+</html>

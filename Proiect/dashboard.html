@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="dashboard-container">
+    <h1>Welcome to the Dashboard</h1>
+
+    <div id="user-section" class="dashboard-section">
+      <h2>User Section</h2>
+      <p id="user-info"></p>
+    </div>
+
+    <div id="admin-section" class="dashboard-section">
+      <h2>Admin Section</h2>
+      <p id="admin-info"></p>
+      <button onclick="addUser()">Add User</button>
+      <button onclick="removeUser()">Remove User</button>
+    </div>
+
+    <div id="notes-section" class="dashboard-section">
+      <h2>Notes Section</h2>
+      <textarea id="notes" rows="5" placeholder="Write your notes here...">${currentUser.notes}</textarea>
+      <button onclick="saveNotes()">Save Notes</button>
+      <button onclick="clearNotes()">Clear Notes</button>
+      <button onclick="goToNotesPage()">Go to Notes Page</button>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="notite.js"></script>
+</body>
+</html>

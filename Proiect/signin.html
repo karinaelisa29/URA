@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Adaugăm stiluri pentru a rearanja elementele */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #signin-container {
+      text-align: center;
+    }
+
+    #signin-form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="signin-container">
+      <h1>Sign In</h1>
+      <form id="signin-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <!-- Adaugăm un div pentru mesajul de eroare -->
+        <div id="error-message" style="color: red;"></div>
+
+        <button type="button" onclick="signin()">Sign In</button>
+      </form>
+    </div>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </div>
+
+  <script src="signin.js"></script>
+</body>
+</html>
