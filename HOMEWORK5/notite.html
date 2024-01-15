@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="notitestyle.css">
+    <title>Notițe</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Your Notes</h1>
+    </div>
+
+    <div class="container">
+        <div id="note-editor-container">
+            <h2>Editor Notițe</h2>
+            <div id="note-editor">
+                <input type="text" id="note-title" placeholder="Titlu">
+                <textarea id="note-text" placeholder="Introduceți notița..."></textarea>
+                <button onclick="saveNote()">Salvează</button>
+                <button class="secondary" onclick="clearEditor()">Anulează</button>
+                <button onclick="toggleBold()">Bold</button>
+                <button onclick="toggleItalic()">Italic</button>
+                <button onclick="toggleList('ordered')">Listă Ordonată</button>
+                <button onclick="toggleList('unordered')">Listă Neordonată</button>
+            </div>
+        </div>
+        
+        <div id="note-list-container">
+            <h2>Notițe</h2>
+            <div id="note-list"></div>
+        </div>
+    </div>
+    <script src="notite.js"></script>
+</body>
+</html>
